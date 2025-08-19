@@ -1,0 +1,12 @@
+# kind-config.yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  extraPortMappings:
+  - containerPort: 32103   # ingress-nginx NodePort for HTTP
+    hostPort: 80
+    protocol: TCP
+  - containerPort: 32243   # ingress-nginx NodePort for HTTPS
+    hostPort: 443
+    protocol: TCP

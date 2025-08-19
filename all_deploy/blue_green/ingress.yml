@@ -2,9 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: module10-app-bg
-  namespace: apps
-#  annotations:
-#nginx.ingress.kubernetes.io/rewrite-target: /
+  namespace: apps 
 spec:
   ingressClassName: nginx
   rules:
