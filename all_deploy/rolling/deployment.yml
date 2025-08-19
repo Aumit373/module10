@@ -12,11 +12,11 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: aumit373/module10
+      app: aumit373/module10:v1.0
   template:
     metadata:
       labels:
-        app: aumit373/module10
+        app: aumit373/module10:v1.0
     spec:
       containers:
         - name: module10

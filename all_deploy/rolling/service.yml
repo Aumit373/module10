@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: aumit373/module10
+    app: aumit373/module10:v1.0
   ports:
   - port: 80
     targetPort: 3000

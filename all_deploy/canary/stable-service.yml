@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: module10-stable-service
+  namespace: apps
 spec:
   type: NodePort
   selector:
