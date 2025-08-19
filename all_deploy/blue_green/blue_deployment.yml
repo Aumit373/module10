@@ -7,12 +7,12 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: module10
+      app: module10-app-bg
       color: blue
   template:
     metadata:
       labels:
-        app: module10
+        app: module10-app-bg
         color: blue
     spec:
       containers:
