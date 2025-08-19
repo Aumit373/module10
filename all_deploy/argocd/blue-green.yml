@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: module10-app-bg
+  name: module10-blue-green
   namespace: argocd
 spec:
   project: default

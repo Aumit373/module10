@@ -15,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: module10-service
+            name: module10-app-svc
             port:
               number: 80

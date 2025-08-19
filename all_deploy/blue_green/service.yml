@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: module10-app-bg
+  name: module10-app-svc
   namespace: apps
 spec:
   type: ClusterIP
