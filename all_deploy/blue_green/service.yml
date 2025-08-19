@@ -4,11 +4,11 @@ metadata:
   name: module10-service
   namespace: apps
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: module10-app-bg
-    version: blue   # Change this to "green" when switching
+    color: blue   # Change this to "green" when switching
   ports:
   - port: 80
-    targetPort: 3000
-    nodePort: 30080
+    targetPort: 5000
+ #   nodePort: 30080

@@ -3,9 +3,10 @@ kind: Ingress
 metadata:
   name: module10-bg-ingress
   namespace: apps
-  annotations:
-nginx.ingress.kubernetes.io/rewrite-target: /
+#  annotations:
+#nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
   - host: bg.local    # 👈 change to your desired host
     http:

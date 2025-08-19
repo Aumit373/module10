@@ -6,17 +6,13 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchLabels:
-      app: module10
-      version: green
+    matchLabels: {app: module10, color: blue}
   template:
     metadata:
-      labels:
-        app: module10
-        version: green
+      labels: {app: module10, color: blue}
     spec:
       containers:
         - name: module10
           image: aumit373/module10:v2.0
           ports:
-            - containerPort: 3000
+            - containerPort: 5000

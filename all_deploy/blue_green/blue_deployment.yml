@@ -8,15 +8,15 @@ spec:
   selector:
     matchLabels:
       app: module10
-      version: blue
+      color: blue
   template:
     metadata:
       labels:
         app: module10
-        version: blue
+        color: blue
     spec:
       containers:
-        - name: module10
+        - name: module10-bg
           image: aumit373/module10:v1.0
           ports:
-            - containerPort: 3000
+            - containerPort: 5000
