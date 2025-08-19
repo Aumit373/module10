@@ -1,18 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: module10-app-green
+  name: module10-app-bg
   namespace: apps
 spec:
   replicas: 2
   selector:
-    matchLabels: {app: module10, color: blue}
+    matchLabels:
+      app: module10-app-bg
+      color: green
   template:
     metadata:
-      labels: {app: module10, color: blue}
+      labels:
+        app: module10-app-bg
+        color: green
     spec:
       containers:
-        - name: module10
+        - name: module10-bg
           image: aumit373/module10:v2.0
           ports:
             - containerPort: 5000
