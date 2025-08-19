@@ -2,9 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: module10-rolling-ingress
-  namespace: default
+  namespace: apps
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: rolling.local    # 👈 change to your desired host

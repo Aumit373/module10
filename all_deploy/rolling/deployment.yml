@@ -2,23 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-rolling
+  namespace: apps
 spec:
   replicas: 3
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 1
+      maxSurge: 0
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: module10
+      app: aumit373/module10
   template:
     metadata:
       labels:
-        app: module10
+        app: aumit373/module10
     spec:
       containers:
-      - name: module10.1
-        image: aumit373/module10:ostad-test
-        ports:
-        - containerPort: 3000
+        - name: module10
+          image: aumit373/module10:v1.0
+          ports:
+            - containerPort: 3000
