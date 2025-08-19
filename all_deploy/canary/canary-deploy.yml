@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: module10-app-canary
+spec:
+  replicas: 1   # only a small % of traffic
+  selector:
+    matchLabels:
+      app: module10
+      version: canary
+  template:
+    metadata:
+      labels:
+        app: module10
+        version: canary
+    spec:
+      containers:
+      - name: module10
+        image: aumit373/module10:v2   # new candidate image
+        ports:
+        - containerPort: 3000

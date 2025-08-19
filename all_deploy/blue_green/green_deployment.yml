@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: module10-app-green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: module10
+      version: green
+  template:
+    metadata:
+      labels:
+        app: module10
+        version: green
+    spec:
+      containers:
+        - name: module10
+          image: aumit373/module10:v2.0
+          ports:
+            - containerPort: 3000
